@@ -1,0 +1,28 @@
+bumpversion==0.5.3
+watchdog==0.9.0
+
+
+# docs
+Sphinx>=1.8.1
+sphinx_rtd_theme
+sphinxcontrib-napoleon
+
+# packaging and builds
+twine==1.12.1
+tox==3.5.2
+
+# tests
+pytest==3.8.2
+pytest-runner==4.2
+coverage==4.5.1
+hypothesis
+pytest-cov
+
+# linting
+flake8>=3.5.0
+flake8-bugbear
+flake8-eradicate
+pep8-naming
+
+# pre-commit 
+pre-commit
