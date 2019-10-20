@@ -8,6 +8,8 @@ JSONAtomics = Union[str, int, float, bool]
 
 booleans = st.booleans
 
+nulls = st.none
+
 
 def constants(value: JSONAtomics) -> Strategy:
     return st.just(value)
