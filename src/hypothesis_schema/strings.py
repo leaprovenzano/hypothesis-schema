@@ -44,7 +44,7 @@ def pattern_strings(pattern: str, min_length: Optional[int] = None, max_length: 
 
 
 @accept_pascalcase
-def schema_strings(
+def strings(
     min_length: int = 0, max_length: Optional[int] = None, pattern: Optional[str] = None, format: Optional[str] = None
 ) -> Strategy:
     if format is not None:

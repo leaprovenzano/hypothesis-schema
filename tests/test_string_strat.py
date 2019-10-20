@@ -4,11 +4,11 @@ import string
 import jsonschema
 
 from hypothesis import given
-from hypothesis_schema.strings import schema_strings
+from hypothesis_schema.strings import strings
 
 
 def validate_data_from_schema(test: Callable = None, **kwargs):
-    @given(schema_strings(**kwargs))
+    @given(strings(**kwargs))
     def inner(data):
         assert jsonschema.validate(data, {"type": "string", **kwargs}) is None
         if test is not None:
