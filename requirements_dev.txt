@@ -17,6 +17,7 @@ pytest-runner==4.2
 coverage==4.5.1
 hypothesis
 pytest-cov
+jsonschema
 
 # linting
 flake8>=3.5.0
