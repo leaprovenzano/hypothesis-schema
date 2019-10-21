@@ -32,6 +32,7 @@ test_ex_minimum_maximum_integers = validate_integers(exclusiveMinimum=1, exclusi
 
 test_multiple_of = validate_integers(multipleOf=5)
 test_multiple_with_bounds = validate_integers(minimum=1, maximum=50, multipleOf=5)
+test_standard_with_kwargs = validate_numbers(description="boop", title="bop")
 
 
 test_unconstrained_numbers = validate_numbers()
@@ -49,3 +50,4 @@ test_multiple_of_lt_one = validate_numbers(multipleOf=0.5)
 test_multiple_of_lt_one_and_neg_min = validate_numbers(minimum=-1.5, multipleOf=0.5)
 
 test_multiple_with_bounds = validate_numbers(minimum=0.1, maximum=50, multipleOf=5.0)
+test_standard_with_kwargs = validate_numbers(description="boop", title="bop")

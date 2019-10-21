@@ -45,7 +45,11 @@ def pattern_strings(pattern: str, min_length: Optional[int] = None, max_length: 
 
 @accept_pascalcase
 def strings(
-    min_length: int = 0, max_length: Optional[int] = None, pattern: Optional[str] = None, format: Optional[str] = None
+    min_length: int = 0,
+    max_length: Optional[int] = None,
+    pattern: Optional[str] = None,
+    format: Optional[str] = None,
+    **kwargs,
 ) -> Strategy:
     if format is not None:
         return format_strings(format)

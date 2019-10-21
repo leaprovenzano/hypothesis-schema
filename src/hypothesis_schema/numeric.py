@@ -15,6 +15,7 @@ def integers(
     exclusive_minimum: Opt[int] = None,
     exclusive_maximum: Opt[int] = None,
     multiple_of: Opt[int] = None,
+    **kwargs
 ) -> Strategy:
     minimum = exclusive_minimum + 1 if exclusive_minimum else minimum
     maximum = exclusive_maximum - 1 if exclusive_maximum else maximum
@@ -31,6 +32,7 @@ def numbers(
     exclusive_minimum: Opt[float] = None,
     exclusive_maximum: Opt[float] = None,
     multiple_of: Opt[float] = None,
+    **kwargs
 ) -> Strategy:
     minimum = exclusive_minimum if exclusive_minimum else minimum
     maximum = exclusive_maximum if exclusive_maximum else maximum

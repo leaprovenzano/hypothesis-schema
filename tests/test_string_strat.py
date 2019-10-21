@@ -45,3 +45,5 @@ test_standard_string = validate_data_from_schema()
 test_string_with_min_length = validate_data_from_schema(minLength=6)
 test_string_with_max_length = validate_data_from_schema(maxLength=6)
 test_string_with_min_and_max_length = validate_data_from_schema(minLength=3, maxLength=6)
+
+test_standard_with_kwargs = validate_data_from_schema(description="boop", title="bop")

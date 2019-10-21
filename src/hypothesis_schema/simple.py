@@ -6,14 +6,17 @@ Strategy = st.SearchStrategy
 JSONAtomics = Union[str, int, float, bool]
 
 
-booleans = st.booleans
+def booleans(**kwargs):
+    return st.booleans()
 
-nulls = st.none
+
+def nulls(**kwargs):
+    return st.none()
 
 
-def constants(value: JSONAtomics) -> Strategy:
+def constants(value: JSONAtomics, **kwargs) -> Strategy:
     return st.just(value)
 
 
-def enums(*choices: Iterable[JSONAtomics]) -> Strategy:
+def enums(*choices: Iterable[JSONAtomics], **kwargs) -> Strategy:
     return st.sampled_from(choices)
