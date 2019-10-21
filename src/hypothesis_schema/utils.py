@@ -14,7 +14,7 @@ def accept_pascalcase(f: Callable):
     """decorator for converting keyword args from pascalcase to snake case.
     """
 
-    def inner(**kwargs):
-        return f(**{to_snakecase(k): v for k, v in kwargs.items()})
+    def inner(*args, **kwargs):
+        return f(*args, **{to_snakecase(k): v for k, v in kwargs.items()})
 
     return inner
